@@ -10,10 +10,11 @@ async function MockMySong(page) {
         "src": "https://raw.githubusercontent.com/qaxperience/mock/main/songs/nirvana.mp3"
       }
 
-    await page.route('**/songs', route => route.fullfill({
+    await page.route('**/songs', route => route.fulfill({
         status: 200,
         body: JSON.stringify([testData])
-      }));
-    
+      }))
     
 }
+exports.__esModule = true;
+exports.MockMySong = MockMySong;
